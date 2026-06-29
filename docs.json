@@ -21,31 +21,31 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    },
     "groups": [
       {
-        "group": "Getting Started",
+        "group": "getting started",
+        "expanded": true,
         "pages": [
-          "index",
-          "quickstart"
+          "overview"
         ]
       },
       {
-        "group": "Untitled Group",
-        "pages": []
+        "group": "resources",
+        "pages": [
+          "variables"
+        ]
+      },
+      {
+        "group": "messages",
+        "pages": [
+          {
+            "group": "templates",
+            "icon": "page",
+            "pages": [
+              "creating-a-template"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -75,5 +75,8 @@
     "default": "dark",
     "strict": true
   },
-  "description": "documentation for the discord bot kuyo"
+  "description": "documentation for the discord bot kuyo",
+  "search": {
+    "prompt": "search.."
+  }
 }

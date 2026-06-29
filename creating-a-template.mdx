@@ -1,0 +1,124 @@
+---
+title: "creating a template"
+description: "templates are used across multiple features including welcome messages, auto responders, sticky messages, etc."
+---
+
+<Info>
+  you need **manage messages** to use the `$templates` command.
+</Info>
+
+<Steps>
+  <Step title="open the dashboard" titleSize="h2">
+    use the \$templates command to open up the dashboard
+  </Step>
+  <Step title="select a collection" titleSize="h2">
+    <Warning>
+      you need to **own a template** or have the **administrator** **permission** to edit or remove someone else's template.
+    </Warning>
+
+    **user templates** are yours across servers. **server templates** belong to the server and anyone with permissions can send them.
+
+    <Frame>
+      ![Screenshot 2026 06 29 At 8 27 46 AM](/images/Screenshot-2026-06-29-at-8.27.46-AM.png)
+    </Frame>
+  </Step>
+  <Step title="create a template" titleSize="h2">
+    create a template by clicking on the create button and selecting which type of template you want to create.
+
+    <Frame>
+      ![Screenshot 2026 06 29 At 8 33 13 AM](/images/Screenshot-2026-06-29-at-8.33.13-AM.png)
+    </Frame>
+
+    <AccordionGroup>
+      <Accordion title="plain text">
+        plain text uses v2 content.  you can use v2 buttons, dropdowns, etc. at the cost of links not embedding. 
+
+        <Info>
+          if you want a link to embed, for example for sticky messages or auto responders, you can select **plain text** while setting either one up. this will not link it to templates or create a template for you.
+        </Info>
+      </Accordion>
+
+      <Accordion title="v2">
+        _(components)_ v2 has more customizability than normal embeds, you can place buttons on the side of messages, use images in the middle of them and more. the entire bot uses v2 for every single message/menu.
+      </Accordion>
+
+      <Accordion title="embeds">
+        normal discord embeds in case you don't like the look of components v2.
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+</Steps>
+
+---
+
+# editing a template
+
+<Frame caption="if you're editing a normal embed, the editor will look different for you.">
+  <img
+    src="/images/Screenshot-2026-06-29-at-8.58.52-AM.png"
+    alt="Screenshot 2026 06 29 At 8 58 52 AM"
+    title="Screenshot 2026 06 29 At 8 58 52 AM"
+    className="mr-auto"
+  />
+</Frame>
+
+### buttons and what they do
+
+<AccordionGroup>
+  <Accordion title="name">
+    change your templates name
+  </Accordion>
+
+  <Accordion title="container">
+    <Info>
+      you can add the variables `{separator}` and/or `{separator_large}` to add a **v2 separator** to your container. you can use the `{image}` variable to put your image wherever you want, or in case you want to use it multiple times. 
+    </Info>
+
+    add or edit a container. adding a container, creates a button with a number. there you can edit the content, add a thumbnail & image and change the color of your container. 
+
+    <Warning>
+      you can have a total of **4000 characters** per template. this is a discord limitation. 
+    </Warning>
+
+    optionally, you can enable **text input mode**. any message you send into the channel will get put inside of the container. the only purpose of this is to get channel/role/user mentions or emojis inside of your container without having to copy and paste the markdown. note that this will replace **<u>any</u>** content inside of the container.
+
+    <Frame>
+      ![Screenshot 2026 06 29 At 9 48 35 AM](/images/Screenshot-2026-06-29-at-9.48.35-AM.png)
+    </Frame>
+  </Accordion>
+
+  <Accordion title="buttons">
+    you can add link or action buttons and dropdowns to your container. any button requires either a label or an emoji, adding both is optional, but at least one of the two is required. 
+
+    action buttons and dropdowns can have multiple actions per option. you can choose from adding, removing or toggling a role, setting user roles, sending a message in a channel or in dms, disabling the button or none.
+
+    <Warning>
+      make sure that kuyo's role is at the top or at least above the role you're trying to give out.\
+      roles that have moderation permissions can only be selected by administrators.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="pingable">
+    <Warning>
+      kuyo will <u>never</u> ping **@everyone** or **@here.**
+    </Warning>
+
+    if you're editing a **v2 template** you have the option to choose which roles, users or variables get pinged. enabling pingable for a **normal embed** makes it so any mention in the content field gets pinged.
+  </Accordion>
+
+  <Accordion title="duplicate">
+    duplicates a template to the current collection.
+  </Accordion>
+
+  <Accordion title="export">
+    exports your current template to raw json code.
+  </Accordion>
+
+  <Accordion title="delete">
+    <Danger>
+      this action cannot be undone.
+    </Danger>
+
+    permanently deletes your current template.
+  </Accordion>
+</AccordionGroup>
