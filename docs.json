@@ -30,21 +30,30 @@
         ]
       },
       {
-        "group": "resources",
-        "pages": [
-          "variables"
-        ]
-      },
-      {
         "group": "messages",
         "pages": [
           {
+            "group": "auto responders",
+            "pages": []
+          },
+          {
             "group": "templates",
-            "icon": "page",
+            "icon": "edit",
             "pages": [
-              "creating-a-template"
+              "creating-a-template",
+              "sending-a-template",
+              "automations",
+              "categories",
+              "importing",
+              "converting"
             ]
           }
+        ]
+      },
+      {
+        "group": "resources",
+        "pages": [
+          "variables"
         ]
       }
     ]
@@ -78,5 +87,8 @@
   "description": "documentation for the discord bot kuyo",
   "search": {
     "prompt": "search.."
+  },
+  "icons": {
+    "library": "tabler"
   }
 }
