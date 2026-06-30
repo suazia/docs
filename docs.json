@@ -49,12 +49,6 @@
             ]
           }
         ]
-      },
-      {
-        "group": "resources",
-        "pages": [
-          "variables"
-        ]
       }
     ]
   },
